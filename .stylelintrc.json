@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-tailwindcss"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.sass"],
+      "customSyntax": "postcss-sass"
+    },
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.less"],
+      "customSyntax": "postcss-less"
+    },
+    {
+      "files": ["**/*.module.*"],
+      "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-prettier",
+        "stylelint-config-idiomatic-order",
+        "stylelint-config-css-modules"
+      ]
+    }
+  ]
+}

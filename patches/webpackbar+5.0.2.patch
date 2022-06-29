@@ -1,0 +1,28 @@
+diff --git a/node_modules/webpackbar/dist/index.cjs b/node_modules/webpackbar/dist/index.cjs
+index 659ec0a..eeb387b 100644
+--- a/node_modules/webpackbar/dist/index.cjs
++++ b/node_modules/webpackbar/dist/index.cjs
+@@ -1704,6 +1704,9 @@ class WebpackBarPlugin extends Webpack__default.ProgressPlugin {
+   constructor(options) {
+     super({ activeModules: true });
+     this.options = Object.assign({}, DEFAULTS, options);
++    if (this.options.profile === true) {
++      this.options.reporters.push("profile");
++    }
+     this.handler = (percent, message, ...details) => {
+       this.updateProgress(percent, message, details);
+     };
+diff --git a/node_modules/webpackbar/dist/index.mjs b/node_modules/webpackbar/dist/index.mjs
+index 0d06749..84fd5ec 100644
+--- a/node_modules/webpackbar/dist/index.mjs
++++ b/node_modules/webpackbar/dist/index.mjs
+@@ -1694,6 +1694,9 @@ class WebpackBarPlugin extends Webpack.ProgressPlugin {
+   constructor(options) {
+     super({ activeModules: true });
+     this.options = Object.assign({}, DEFAULTS, options);
++    if (this.options.profile === true) {
++      this.options.reporters.push("profile");
++    }
+     this.handler = (percent, message, ...details) => {
+       this.updateProgress(percent, message, details);
+     };
