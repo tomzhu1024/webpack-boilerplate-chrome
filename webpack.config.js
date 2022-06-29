@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackBarPlugin = require('webpackbar');
 const FriendlyErrorsWebpackPlugin = require('@nuxt/friendly-errors-webpack-plugin');
+const { HotModuleReplacementPlugin } = require('webpack');
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -15,16 +16,11 @@ const isDevelopment = env.NODE_ENV === 'development';
 const isAnalyzer = env.ANALYZER === 'true';
 
 const config = {
-  devServer: {
-    hot: true,
-    client: { overlay: false },
-    // static: path.resolve(__dirname, 'build'),
-    host: env.HOST,
-    port: env.PORT,
-    open: true,
-  },
   entry: {
-    app: path.resolve(__dirname, 'src/app/index.tsx'),
+    background: path.resolve(__dirname, 'src/pages/Background/index.ts'),
+    contentScript: path.resolve(__dirname, 'src/pages/ContentScript/index.ts'),
+    newTab: path.resolve(__dirname, 'src/pages/NewTab/index.tsx'),
+    options: path.resolve(__dirname, 'src/pages/Options/index.tsx'),
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -93,10 +89,16 @@ const config = {
       ],
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'options.html',
       template: path.resolve(__dirname, 'src/templates/default.ejs'),
       minify: !isDevelopment,
-      chunks: ['app'],
+      chunks: ['options'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'newTab.html',
+      template: path.resolve(__dirname, 'src/templates/default.ejs'),
+      minify: !isDevelopment,
+      chunks: ['newTab'],
     }),
   ],
   resolve: {
@@ -112,7 +114,10 @@ const devConfig = merge(config, {
   stats: false,
   devtool: 'inline-cheap-module-source-map',
   plugins: [
-    new ReactRefreshPlugin(),
+    new HotModuleReplacementPlugin(),
+    new ReactRefreshPlugin({
+      client: false, // Customized option, patch required.
+    }),
     new FriendlyErrorsWebpackPlugin(),
   ],
   resolve: {

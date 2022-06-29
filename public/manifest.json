@@ -1,0 +1,25 @@
+{
+  "name": "Webpack Boilerplate",
+  "description": "A good starting point for using webpack to build stuffs, including Chrome extensions.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {},
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.bundle.js"]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newTab.html"
+  },
+  "options_page": "options.html"
+}
