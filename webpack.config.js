@@ -73,7 +73,16 @@ const config = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|woff2?|ttf|svg|eot)$/i,
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: { icon: true },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|woff2?|ttf|eot)$/i,
         type: 'asset/resource',
       },
     ],
