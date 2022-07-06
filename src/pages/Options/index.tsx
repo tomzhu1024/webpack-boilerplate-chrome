@@ -11,7 +11,7 @@ const App: React.FC = () => (
   </div>
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
   <React.StrictMode>
     <App />
