@@ -114,7 +114,7 @@ const config = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.sass', '.scss', '.less'],
   },
 };
 
