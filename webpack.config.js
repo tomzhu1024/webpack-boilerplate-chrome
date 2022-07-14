@@ -107,13 +107,13 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       filename: 'options.html',
-      template: path.resolve(__dirname, 'src/templates/default.ejs'),
+      template: path.resolve(__dirname, 'src/templates/default.html'),
       minify: !isDevelopment,
       chunks: ['options'],
     }),
     new HtmlWebpackPlugin({
       filename: 'newTab.html',
-      template: path.resolve(__dirname, 'src/templates/default.ejs'),
+      template: path.resolve(__dirname, 'src/templates/default.html'),
       minify: !isDevelopment,
       chunks: ['newTab'],
     }),
