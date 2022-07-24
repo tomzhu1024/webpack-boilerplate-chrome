@@ -1,7 +1,7 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-prettier",
+    "stylelint-prettier/recommended",
     "stylelint-config-idiomatic-order",
     "stylelint-config-tailwindcss"
   ],
@@ -22,7 +22,7 @@
       "files": ["**/*.module.*"],
       "extends": [
         "stylelint-config-standard",
-        "stylelint-config-prettier",
+        "stylelint-prettier/recommended",
         "stylelint-config-idiomatic-order",
         "stylelint-config-css-modules"
       ]
