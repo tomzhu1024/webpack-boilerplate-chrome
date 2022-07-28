@@ -19,7 +19,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": [],
   "rules": {},
   "settings": {
     "react": {
@@ -31,7 +31,7 @@
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@typescript-eslint/recommended"],
       "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint"],
+      "plugins": [],
       "rules": {}
     }
   ]
