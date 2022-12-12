@@ -1,10 +1,19 @@
-# Dependency directories
+# NPM packages
 node_modules/
+
+# Yarn v2 files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # Build output
 build/
 
-# Logs
+# Log files
 logs
 *.log
 npm-debug.log*

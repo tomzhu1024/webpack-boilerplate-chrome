@@ -9,7 +9,7 @@ A good starting point for using [webpack](https://webpack.js.org/) to build stuf
 Tested on both _Windows_ and _macOS_, with:
 
 - `Node` = `16.15.1`
-- `Yarn` = `1.22.19`
+- `Yarn` = `3.2.4`
 
 ## Screenshots
 
