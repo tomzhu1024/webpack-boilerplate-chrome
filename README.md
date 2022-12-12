@@ -71,10 +71,6 @@ yarn release
 
 To use [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/), please place components outside the top-level file. Components in the top-level file will be downgraded to _live reload_.
 
-### Known Issue
-
-When `devMiddleware.writeToDisk` option of `webpack-dev-server` is enabled, [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) will not work properly and will downgrade to _live reload_. However, in Chrome extension development, the `devMiddleware.writeToDisk` option is required for Chrome to properly load the extension. It means that [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) will barely work.
-
 ## Auto-Reload
 
 Remember to keep the DevTool panel of the _Background_ service worker open during development, otherwise _Auto-Reload_ may not work as expected.
