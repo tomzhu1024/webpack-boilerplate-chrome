@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackBarPlugin = require('webpackbar');
 const FriendlyErrorsWebpackPlugin = require('@nuxt/friendly-errors-webpack-plugin');
-const { HotModuleReplacementPlugin } = require('webpack');
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -122,7 +121,6 @@ const devConfig = merge(config, {
   stats: false,
   devtool: 'inline-cheap-module-source-map',
   plugins: [
-    new HotModuleReplacementPlugin(),
     new ReactRefreshPlugin({
       client: false, // Customized option, patch required.
     }),

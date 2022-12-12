@@ -39,9 +39,8 @@ for (let entryName in config.entry) {
 const compiler = webpack(config);
 const server = new WebpackDevServer(
   {
-    hot: false,
+    hot: true,
     client: false,
-    static: path.resolve(__dirname, '../build'),
     host: env.HOST,
     port: env.PORT,
     devMiddleware: {
