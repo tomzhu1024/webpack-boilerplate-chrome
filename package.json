@@ -25,7 +25,9 @@
     "stylelint": "stylelint \"src/**/*.{css,sass,scss,less}\"",
     "stylelint:fix": "stylelint --fix \"src/**/*.{css,sass,scss,less}\"",
     "prettier": "prettier --check \"(src|public)/**/*.{html,js,jsx,ts,tsx,css,sass,scss,less,json}\"",
-    "prettier:fix": "prettier --write \"(src|public)/**/*.{html,js,jsx,ts,tsx,css,sass,scss,less,json}\""
+    "prettier:fix": "prettier --write \"(src|public)/**/*.{html,js,jsx,ts,tsx,css,sass,scss,less,json}\"",
+    "commit": "cz",
+    "release": "standard-version"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -51,11 +53,13 @@
     "babel-loader": "^8.2.5",
     "babel-plugin-import": "^1.13.5",
     "clean-webpack-plugin": "^4.0.0",
+    "commitizen": "^4.2.6",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.23.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.12",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -78,6 +82,7 @@
     "react-refresh": "^0.14.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
+    "standard-version": "^9.5.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.9.1",
     "stylelint-config-css-modules": "^4.1.0",
@@ -94,5 +99,10 @@
     "webpack-dev-server": "^4.9.3",
     "webpack-merge": "^5.8.0",
     "webpackbar": "^5.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
