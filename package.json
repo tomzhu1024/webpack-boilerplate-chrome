@@ -12,8 +12,7 @@
     "not dead"
   ],
   "scripts": {
-    "prepare": "husky install",
-    "postinstall": "patch-package",
+    "postinstall": "patch-package && husky install",
     "start": "node utils/start.js",
     "build": "cross-env NODE_ENV=production webpack build",
     "analyze-bundle": "cross-env NODE_ENV=production ANALYZER=true webpack build",
