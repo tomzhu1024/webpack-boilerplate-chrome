@@ -6,7 +6,7 @@ In Chrome extension development, some entries _does not_ support [Hot Module Rep
 
 ## How It Works
 
-One possible solution to achieve a similar effect is to inject clients in _Background_ and _Content Scripts_ and set-up a custom middleware in the Dev Server. At the beginning, the client in _Background_ script establishes a long connection with the Dev Server.
+One possible solution to achieve a similar effect is to inject clients in _Background_ and _Content Scripts_ and set up a custom middleware in the Dev Server. At the beginning, the client in _Background_ script establishes a long connection with the Dev Server.
 
 When the Dev Server announces a code change in the Background:
 

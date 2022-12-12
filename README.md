@@ -41,14 +41,14 @@ Tested on both _Windows_ and _macOS_, with:
 
 ## How to Use
 
-### Update Configurations
+### 1. Update Configurations
 
 - Edit `webpack.config.js` and update the configuration field `entry` to determine what to be built;
 - Edit `utils/env.js` and update the configuration field `NOT_HOT_RELOAD` to determine which entries to be excluded from [Hot Module Replacement (HMR)](https://webpack.js.org/concepts/hot-module-replacement/);
 - If you are working with Chrome extensions, also:
   - Update configuration field `CONTENT_SCRIPT` and `BACKGROUND` to match the entries of _Content Scripts_ and _Background_ respectively.
 
-### CLI Commands
+### 2. CLI Commands
 
 ```bash
 # Install dependencies
@@ -57,25 +57,33 @@ yarn install
 # Start dev server
 yarn run start
 
-# Build the application
+# Build application
 yarn run build
+
+# Commit
+yarn commit
+
+# Release
+yarn release
 ```
 
-## Notes
+## Hot Module Replacement (HMR)
 
-### About Hot Module Replacement (HMR)
+To use [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/), please place components outside the top-level file. Components in the top-level file will be downgraded to _live reload_.
 
-To use [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/), please place components outside of the top-level file. Components in the top-level file will be downgraded to _live reload_.
-
-#### Known Issue
+### Known Issue
 
 When `devMiddleware.writeToDisk` option of `webpack-dev-server` is enabled, [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) will not work properly and will downgrade to _live reload_. However, in Chrome extension development, the `devMiddleware.writeToDisk` option is required for Chrome to properly load the extension. It means that [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) will barely work.
 
-### About _Auto-Reload_
+## Auto-Reload
 
 Remember to keep the DevTool panel of the _Background_ service worker open during development, otherwise _Auto-Reload_ may not work as expected.
 
 See [here](docs/auto-reload.md) for more details.
+
+## Class Names in CSS-Modules
+
+CSS's naming convention requires the class names to be in `kebab-case`. However, in JavaScrip, it is not allowed to write `style.my-style` and only accepts `style['my-style']` or `style.myStyle`. It is not convenient. Therefore, in this boilerplate, the class names in css-modules will be converted from `kebab-case` to `camelCase` to allow usages such as `style.myStyle`.
 
 ## Credits
 
