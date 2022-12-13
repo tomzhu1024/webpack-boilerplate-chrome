@@ -33,6 +33,13 @@
       "parser": "@typescript-eslint/parser",
       "plugins": [],
       "rules": {}
+    },
+    {
+      "files": ["**/*.test.[jt]s", "**/*.test.[jt]sx"],
+      "env": {
+        "jest": true
+      },
+      "extends": ["plugin:jest/recommended"]
     }
   ]
 }
