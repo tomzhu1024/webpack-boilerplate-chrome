@@ -1,7 +1,7 @@
-# NPM packages
+# Dependency files
 node_modules/
 
-# Yarn v2 files
+# Yarn files (not using Zero-Installs)
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -19,3 +19,6 @@ logs/
 
 # JetBrain IDE files
 .idea/
+
+# MacOS files
+.DS_Store
