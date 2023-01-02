@@ -7,19 +7,19 @@
   ],
   "overrides": [
     {
-      "files": ["**/*.sass"],
+      "files": ["./**/*.sass"],
       "customSyntax": "postcss-sass"
     },
     {
-      "files": ["**/*.scss"],
+      "files": ["./**/*.scss"],
       "customSyntax": "postcss-scss"
     },
     {
-      "files": ["**/*.less"],
+      "files": ["./**/*.less"],
       "customSyntax": "postcss-less"
     },
     {
-      "files": ["**/*.module.*"],
+      "files": ["./**/*.module.*"],
       "extends": [
         "stylelint-config-standard",
         "stylelint-prettier/recommended",

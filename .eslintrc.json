@@ -2,7 +2,7 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true,
+    "es2022": true,
     "webextensions": true
   },
   "extends": [
@@ -28,14 +28,14 @@
   },
   "overrides": [
     {
-      "files": ["**/*.ts", "**/*.tsx"],
+      "files": ["./**/*.ts", "./**/*.tsx"],
       "extends": ["plugin:@typescript-eslint/recommended"],
       "parser": "@typescript-eslint/parser",
       "plugins": [],
       "rules": {}
     },
     {
-      "files": ["**/*.test.[jt]s", "**/*.test.[jt]sx"],
+      "files": ["./**/*.test.[jt]s", "./**/*.test.[jt]sx"],
       "env": {
         "jest": true
       },

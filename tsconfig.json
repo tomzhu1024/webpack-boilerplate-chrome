@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
+    "moduleResolution": "NodeNext",
     "target": "ES6",
-    "lib": ["ES5", "ES6", "DOM"],
+    "lib": ["ES6", "DOM"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
@@ -13,11 +14,11 @@
     "preserveConstEnums": true,
     "removeComments": true,
     "skipLibCheck": true,
-    "typeRoots": ["node_modules/@types"],
-    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["./src/**/*"]
 }
