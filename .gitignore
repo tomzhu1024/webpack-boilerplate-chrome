@@ -20,5 +20,8 @@ logs/
 # JetBrain IDE files
 .idea/
 
+# Visual Studio Code files
+.vscode/
+
 # MacOS files
 .DS_Store
