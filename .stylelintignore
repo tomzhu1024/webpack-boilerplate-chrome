@@ -1,0 +1,11 @@
+# Dependency files
+node_modules/
+
+# Build output
+build/
+
+# JetBrain IDE files
+.idea/
+
+# Visual Studio Code files
+.vscode/
