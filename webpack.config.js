@@ -39,7 +39,24 @@ const config = {
       {
         test: /\.[jt]sx?$/i,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: {
+          loader: 'swc-loader',
+          options: {
+            jsc: {
+              parser: {
+                syntax: 'typescript',
+                tsx: true,
+              },
+              transform: {
+                react: {
+                  runtime: 'automatic',
+                  development: isDevelopment,
+                  refresh: isDevelopment,
+                },
+              },
+            },
+          },
+        },
       },
       {
         test: /\.css$/i,
