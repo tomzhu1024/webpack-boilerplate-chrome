@@ -1,7 +1,7 @@
-diff --git a/node_modules/webpackbar/dist/index.cjs b/node_modules/webpackbar/dist/index.cjs
-index 659ec0a..eeb387b 100644
---- a/node_modules/webpackbar/dist/index.cjs
-+++ b/node_modules/webpackbar/dist/index.cjs
+diff --git a/dist/index.cjs b/dist/index.cjs
+index 659ec0a3420ef663df3a031780eddece13365eb7..eeb387b0bbab29744082e9dc026dfb6871b8b5ab 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
 @@ -1704,6 +1704,9 @@ class WebpackBarPlugin extends Webpack__default.ProgressPlugin {
    constructor(options) {
      super({ activeModules: true });
@@ -12,10 +12,10 @@ index 659ec0a..eeb387b 100644
      this.handler = (percent, message, ...details) => {
        this.updateProgress(percent, message, details);
      };
-diff --git a/node_modules/webpackbar/dist/index.mjs b/node_modules/webpackbar/dist/index.mjs
-index 0d06749..84fd5ec 100644
---- a/node_modules/webpackbar/dist/index.mjs
-+++ b/node_modules/webpackbar/dist/index.mjs
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 0d067499e9b899b4d7d6f419b0cc4cd7ad511e64..84fd5ecfce35e3347c9f84c5320e5649a6ab1e94 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
 @@ -1694,6 +1694,9 @@ class WebpackBarPlugin extends Webpack.ProgressPlugin {
    constructor(options) {
      super({ activeModules: true });

@@ -1,7 +1,7 @@
-diff --git a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/index.js b/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/index.js
-index 2dc4237..07c68b0 100644
---- a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/index.js
-+++ b/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/index.js
+diff --git a/lib/index.js b/lib/index.js
+index 2dc42372aa661d1f6683dd6ae9ee71581c6dcde8..07c68b00dbd509150bddd68ee097a20f3fc38eca 100644
+--- a/lib/index.js
++++ b/lib/index.js
 @@ -72,7 +72,7 @@ class ReactRefreshPlugin {
        devServer: compiler.options.devServer,
        options: this.options,
@@ -20,10 +20,10 @@ index 2dc4237..07c68b0 100644
        compiler.options.entry = injectRefreshEntry(compiler.options.entry, addEntries);
      }
  
-diff --git a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/options.json b/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/options.json
-index 40443b8..9f62c9e 100644
---- a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/options.json
-+++ b/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/options.json
+diff --git a/lib/options.json b/lib/options.json
+index 40443b8a8959fc691b43c712b18582f5ea48b399..9f62c9ea87b4b85035a94094059d43cda88b6fe9 100644
+--- a/lib/options.json
++++ b/lib/options.json
 @@ -55,6 +55,7 @@
      }
    },
@@ -32,10 +32,10 @@ index 40443b8..9f62c9e 100644
      "esModule": {
        "anyOf": [{ "type": "boolean" }, { "$ref": "#/definitions/ESModuleOptions" }]
      },
-diff --git a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/utils/normalizeOptions.js b/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/utils/normalizeOptions.js
-index 8c7bbbb..abf7ff0 100644
---- a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/utils/normalizeOptions.js
-+++ b/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/utils/normalizeOptions.js
+diff --git a/lib/utils/normalizeOptions.js b/lib/utils/normalizeOptions.js
+index 8c7bbbb9fe14b16af67f64f2bd0b69efc4c5fea7..abf7ff04c3ac67ae6efdf508af4bdc3c04dde222 100644
+--- a/lib/utils/normalizeOptions.js
++++ b/lib/utils/normalizeOptions.js
 @@ -10,6 +10,7 @@ const normalizeOptions = (options) => {
    d(options, 'include', /\.([cm]js|[jt]sx?|flow)$/i);
    d(options, 'forceEnable');
@@ -44,10 +44,10 @@ index 8c7bbbb..abf7ff0 100644
  
    n(options, 'overlay', (overlay) => {
      /** @type {import('../types').NormalizedErrorOverlayOptions} */
-diff --git a/node_modules/@pmmmwh/react-refresh-webpack-plugin/types/lib/types.d.ts b/node_modules/@pmmmwh/react-refresh-webpack-plugin/types/lib/types.d.ts
-index be0924c..d176ae2 100644
---- a/node_modules/@pmmmwh/react-refresh-webpack-plugin/types/lib/types.d.ts
-+++ b/node_modules/@pmmmwh/react-refresh-webpack-plugin/types/lib/types.d.ts
+diff --git a/types/lib/types.d.ts b/types/lib/types.d.ts
+index be0924c3a078ac910576c4952acb9862d5b20b1d..d176ae2f240095d7be9b0f59564b23271137fb06 100644
+--- a/types/lib/types.d.ts
++++ b/types/lib/types.d.ts
 @@ -39,6 +39,10 @@ export type NormalizedErrorOverlayOptions = import('type-fest').SetRequired<
    'entry' | 'module' | 'sockIntegration'
  >;
